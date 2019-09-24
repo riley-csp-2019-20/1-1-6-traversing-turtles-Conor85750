@@ -21,17 +21,30 @@ for s in turtle_shapes:
 #  this is where the start x and starty is 0
 startx = 0
 starty = 0 
-direction = 90
+count = 1
 # move the turtle around
 for t in my_turtles:
-	t.penup()
-	t.goto(startx, starty)
-	t.pendown()
-	t.forward(50)
-    t.setheading(90)
+  t.penup()
+  t.goto(startx, starty)
+  t.pendown()
+  t.left(45*count)
+  t.forward(50)
+  count += 1
+ 
+
+
+
+
+
+  startx = t.xcor()
+  starty = t.ycor()
+	
+
+
+
+
 	# it adds 50 to the starts
-	startx = t.xcor()
-	starty = t.ycor()
+	
 
 wn = trtl.Screen()
 wn.mainloop()
